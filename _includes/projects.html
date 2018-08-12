@@ -2,28 +2,27 @@
   <h1> Featured Projects </h1>
 </div>
 <div class="user-projects">
-  <div class="images-right">
-    <img alt="mountains" src="{{ "/assets/img/mountains.jpg" | prepend: site.baseurl }}" />
+ {% for project in site.projects reversed %}
+  {% assign loopindex = forloop.index | modulo: 2 %}
+ {% capture class_image %}{% if loopindex == 0 %}images-left{% else %}images-right{% endif %}{% endcapture %}
+  <div class="{{class_image}}">
+    <img alt="mountains" src="{{ project.image | prepend: site.baseurl }}" />
   </div>
-  <div class="contents">
-    <h3> Diagnosticie </h3>
-    <ul>
-      <li> Featured Skills</li>
+  {% capture class_content %} {% if loopindex == 0 %}contents-right{% else %}contents{% endif %}{% endcapture %}
+  <div class="{{class_content}}">
+    <h3> {{ project.title}} </h3>
+    <ul class="tags">
+      <li class="tag">Laravel</li>
+      <li class="tag">HTML</li>
+      <li class="tag">CSS</li>
+      <li class="tag">JS</li>
     </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
+    <p>
+      {{ project.description }}
+    </p>
   </div>
+ {% endfor %}
+  
+  
 </div>
-<div class="user-projects">
-  <div class="images-left">
-    <img alt="mountains" src="{{ "/assets/img/skate.jpg" | prepend: site.baseurl }}" />
-  </div>
-  <div class="contents-right">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
-  </div>
-</div>
+
