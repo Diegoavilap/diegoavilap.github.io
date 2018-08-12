@@ -32,7 +32,7 @@ plugins:
 
 #User settings
 username: Diego Avila
-user_title: Software Developer
+user_title: Developer
 email: diegoavilapava@hotmail.com
 twitter_username: diegoavila02
 github_username:  diegoavilap 
@@ -49,3 +49,20 @@ gplus_username:  lorem_ipsum
 #   - vendor/gems/
 #   - vendor/ruby/
 port: 8080
+
+############
+# Timeline #
+############
+collections:
+  events:
+    output: false
+
+# First image of the Timeline
+
+timeline-img: "/img/timeline/default.png"
+
+# Enable minification SASS
+
+sass:
+  sass_dir: assets/scss
+  style:  compressed # expanded

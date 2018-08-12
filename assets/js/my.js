@@ -185,3 +185,36 @@ Original Idea and Design by Luca Luzzatti
 
 Optimizing tips from Benjamin Kästner
 General tips from Salvatore Previti*/
+
+//var ancho_de_pagina = window.innerWidth;
+/*
+var ancho_de_pagina = window.matchMedia("(max-width: 700px)");
+function adaptar_canvas(ancho_de_pagina) {
+  
+  if (ancho_de_pagina.matches) { // If media query matches
+      document.getElementById('canvas').width = 700;
+      //document.getElementById('title').width = 500;
+  } else {
+    alert('hola ' + document.body.clientWidth);
+    document.getElementById('canvas').width = document.body.clientWidth;
+    //document.getElementById('title').width = window.innerWidth;
+  }
+  /*
+  if (ancho_de_pagina >= 1348) { // If media query matches
+    document.getElementById('canvas').width = 1348;
+
+  } else if(ancho_de_pagina >= 992) {
+    document.getElementById('canvas').width = 992;
+  } else if(ancho_de_pagina >= 768){
+    document.getElementById('canvas').width = 768;
+  } else{
+    document.getElementById('canvas').width = window.innerWidth;
+  }
+  
+  
+}
+ancho_de_pagina.addListener(adaptar_canvas);
+*/
+window.addEventListener('resize', function () {
+  document.getElementById('canvas').width = document.body.clientWidth;
+});
