@@ -109,6 +109,8 @@ function drawCircle(ctx, circle) {
 function init() {
   window.requestAnimationFrame(draw);
   document.getElementById('canvas').width = document.body.clientWidth;
+  document.getElementById('canvas').height = document.getElementById('title').clientHeight;
+  //console.log(document.getElementById('title').clientHeight);
 }
 
 //rendering function
