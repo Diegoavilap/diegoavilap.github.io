@@ -108,6 +108,7 @@ function drawCircle(ctx, circle) {
 //initializing function
 function init() {
   window.requestAnimationFrame(draw);
+  document.getElementById('canvas').width = document.body.clientWidth;
 }
 
 //rendering function
@@ -215,6 +216,8 @@ function adaptar_canvas(ancho_de_pagina) {
 }
 ancho_de_pagina.addListener(adaptar_canvas);
 */
+
 window.addEventListener('resize', function () {
   document.getElementById('canvas').width = document.body.clientWidth;
+  console.log(document.body.clientWidth);
 });
