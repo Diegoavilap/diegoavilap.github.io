@@ -15,8 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 title: Diego Avila
 email: diegoavilapava@hotmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Website of Diego Avila.
+description: "Hi 👋, I'm Diego, passionate about learning how the software world 💻 works 
+and how to develop it with my hands if you know a concept, patron or technique 🤓 
+don't doubt to tell me and I will appraise it 😊. 
+I like to watch anime 🇯🇵, series 📺 , and movies 🎬, play soccer ⚽ and listen to music 🎧. 
+Lifelong learning is my purpose. Sometimes I e̵a̵t̵ give pizza at @ibagueJS 🤭"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
